@@ -1,3 +1,46 @@
+/* Service detail breadcrumb */
+.service-breadcrumb-bar {
+    padding: 18px 0;
+    background: #fff;
+    font-family: Tahoma, sans-serif;
+}
+
+.service-breadcrumb-bar .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.service-breadcrumb-bar a {
+    color: #26364a;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none !important;
+    transition: color .2s ease;
+}
+
+.service-breadcrumb-bar a:hover,
+.service-breadcrumb-bar a:focus-visible {
+    color: #009970;
+    text-decoration: none !important;
+}
+
+.service-breadcrumb-bar span {
+    color: #8a929b;
+}
+
+@media (max-width: 575.98px) {
+    .service-breadcrumb-bar {
+        padding: 13px 0;
+    }
+
+    .service-breadcrumb-bar a {
+        font-size: .9rem;
+    }
+}
+
 /* ===== SECTION ===== */
 
 .petroleum-section {
