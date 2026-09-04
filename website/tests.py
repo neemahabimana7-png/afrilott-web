@@ -69,6 +69,11 @@ class MigratedPageTests(SimpleTestCase):
                 template_path = settings.BASE_DIR / "templates" / template_name
                 self.assertIsNone(local_html_link.search(template_path.read_text(encoding="utf-8")))
 
+    def test_healthcheck_returns_ok(self):
+        response = self.client.get("/healthz/")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.content, b"ok")
+
     def test_rendered_markup_matches_the_original_except_link_destinations(self):
         attribute_value = re.compile(r'''\b(href|src)\s*=\s*["\'][^"\']*["\']''', re.IGNORECASE)
 

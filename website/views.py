@@ -1,10 +1,16 @@
 """Render-only views for the existing Afrilott frontend templates."""
 
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
 def _render(request, template_name):
     return render(request, template_name)
+
+
+def healthcheck(request):
+    """Minimal unauthenticated health endpoint for the platform proxy."""
+    return HttpResponse("ok", content_type="text/plain")
 
 
 def home(request): return _render(request, "website/index.html")
