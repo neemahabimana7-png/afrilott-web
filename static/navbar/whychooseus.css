@@ -1,0 +1,97 @@
+.why-choose-section {
+    padding: 42px 0 60px;
+    background: #fff;
+    font-family: Tahoma, sans-serif;
+}
+
+.why-choose-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, .9fr);
+    align-items: start;
+    gap: 48px;
+    margin-bottom: 28px;
+}
+
+.why-choose-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #009970;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.why-choose-eyebrow span { width: 42px; height: 2px; background: #009970; }
+.why-choose-copy h1 { margin: 0 0 14px; color: #071734; font-size: 2.8rem; font-weight: 700; line-height: 1.12; }
+.why-choose-copy h1 strong { color: #009970; font-weight: 700; }
+.why-choose-copy > p { max-width: 680px; margin: 0; color: #555; font-size: 1rem; line-height: 1.8; }
+.why-choose-quote {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 18px 0 0px;
+    color: #009970;
+}
+.why-quote-mark { color: #009970; font-size: 15px; font-weight: 700; line-height: .8; }
+.why-choose-quote p { position: relative; margin: 0; padding-bottom: 10px; color: #009970; font-size: 16px; font-style: italic; line-height: 1.45; }
+.why-choose-quote p::after { content: ""; position: absolute; bottom: 0; left: 0; width: 34px; height: 2px; background: #009970; }
+.why-choose-media img { display: block; width: 100%; height: 270px; border-radius: 10px; object-fit: cover; object-position: center; }
+
+.why-choose-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.why-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    min-height: 196px;
+    padding: 43px 22px 22px;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 5px 16px rgba(7, 23, 52, .05);
+    animation: whyCardEnter .55s ease both;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.why-card:nth-child(2), .why-card:nth-child(5) { animation-delay: .08s; }
+.why-card:nth-child(3), .why-card:nth-child(6) { animation-delay: .16s; }
+.why-card:nth-child(7) { animation-delay: .22s; }
+.why-card:hover { transform: translateY(-4px); border-color: rgba(0,153,112,.55); box-shadow: 0 10px 24px rgba(0,153,112,.1); }
+@keyframes whyCardEnter { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+.why-number { position: absolute; top: 12px; left: 16px; padding-left: 11px; border-left: 2px solid #009970; color: #007f5d; font-size: .8rem; font-weight: 700; line-height: 20px; }
+.why-icon { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: #007f5d; }
+.why-icon svg { width: 22px; height: 22px; fill: #fff; }
+.why-card h2 { margin: 1px 0 9px; color: #071734; font-size: 1rem; font-weight: 700; line-height: 1.4; }
+.why-card p { margin: 0; color: #666; font-size: .88rem; line-height: 1.6; }
+.why-card-wide { grid-column: 1 / -1; min-height: auto; }
+
+@media (max-width: 992px) {
+    .why-choose-intro { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .why-choose-copy h1 { font-size: 2.3rem; }
+    .why-choose-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .why-card-wide { grid-column: auto; }
+}
+
+@media (max-width: 768px) {
+    .why-choose-section { padding: 35px 0 48px; }
+    .why-choose-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 24px; }
+    .why-choose-copy h1 { font-size: 2rem; }
+    .why-choose-media img { height: 260px; }
+}
+
+@media (max-width: 576px) {
+    .why-choose-section { padding: 28px 0 40px; }
+    .why-choose-copy h1 { font-size: 1.9rem; }
+    .why-choose-copy > p { font-size: .95rem; }
+    .why-choose-grid { grid-template-columns: 1fr; }
+    .why-card { min-height: auto; padding: 42px 18px 20px; }
+    .why-choose-media img { height: 220px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .why-card { animation: none; transition: none; }
+}
