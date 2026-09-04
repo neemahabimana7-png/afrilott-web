@@ -1,1 +1,1 @@
-# afrilott-web
+# AFLT-website

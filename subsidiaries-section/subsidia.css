@@ -1,0 +1,35 @@
+.subsidiary-showcase { padding: 16px 0 70px; background: #fff; font-family: Tahoma, sans-serif; }
+.subsidiary-header { max-width: 850px; margin: 0 auto 32px; }
+.subsidiary-kicker { display: flex; align-items: center; justify-content: center; gap: 13px; margin-bottom: 12px; color: #007f5d; font-size: .9rem; font-weight: 700; letter-spacing: 1.5px; }
+.subsidiary-kicker span { width: 42px; height: 2px; background: #009970; }
+.subsidiary-title { margin: 0 0 12px; color: #071734; font-size: 2.8rem; font-weight: 700; line-height: 1.15; }
+.subsidiary-title strong { color: #009970; font-weight: 700; }
+.subsidiary-subtitle { max-width: 760px; margin: 0 auto; color: #555; font-size: 1rem; line-height: 1.8; }
+.subsidiary-grid { max-width: 980px; margin-inline: auto; }
+.subsidiary-grid > div { display: flex; }
+.subsidiary-card { display: flex; flex-direction: column; width: 100%; overflow: hidden; border: 1px solid #e5e7eb; border-radius: 12px; background: #fff; box-shadow: 0 8px 24px rgba(7,23,52,.07); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.subsidiary-card:hover { transform: translateY(-5px); border-color: rgba(0,153,112,.4); box-shadow: 0 13px 30px rgba(7,23,52,.1); }
+.subsidiary-card-image-wrap { height: 190px; overflow: hidden; }
+.subsidiary-card-image { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.subsidiary-card:hover .subsidiary-card-image { transform: scale(1.035); }
+.subsidiary-card-body { position: relative; display: flex; flex: 1; flex-direction: column; padding: 34px 20px 20px; }
+.subsidiary-icon { position: absolute; top: -27px; left: 20px; display: grid; place-items: center; width: 54px; height: 54px; border: 4px solid #fff; border-radius: 50%; background: #009970; color: #fff; box-shadow: 0 4px 12px rgba(7,23,52,.12); }
+.subsidiary-icon svg { width: 24px; height: 24px; fill: currentColor; }
+.subsidiary-card-body h2 { margin: 0 0 6px; color: #071734; font-size: 1.45rem; font-weight: 700; }
+.subsidiary-category { margin: 0 0 14px; color: #007f5d; font-size: .82rem; font-weight: 700; letter-spacing: .16em; }
+.subsidiary-description { margin: 0 0 13px; color: #555; font-size: .94rem; line-height: 1.6; }
+.subsidiary-services { margin: 0 0 18px; padding: 13px 0 0; border-top: 1px solid #e7e7e7; list-style: none; }
+.subsidiary-services li { position: relative; margin-bottom: 9px; padding-left: 32px; color: #4b5563; line-height: 1.5; }
+.subsidiary-services li::before { content: "✓"; position: absolute; left: 0; top: 1px; display: grid; place-items: center; width: 21px; height: 21px; border-radius: 50%; background: #00865f; color: #fff; font-size: .75rem; font-weight: 700; }
+.subsidiary-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 11px; margin-top: auto; padding: 10px 24px; border-radius: 50px; background: #009970; color: #fff; font-size: .94rem; font-weight: 700; text-decoration: none; transition: background .25s ease, transform .25s ease; }
+.subsidiary-link:hover { background: #007f5d; color: #fff; transform: translateY(-2px); }
+.subsidiary-card-navy .subsidiary-icon, .subsidiary-card-navy .subsidiary-link { background: #0b3b70; }
+.subsidiary-card-navy .subsidiary-category { color: #0b3b70; }
+.subsidiary-card-navy .subsidiary-services li::before { background: #0b3b70; }
+.subsidiary-card-navy .subsidiary-link:hover { background: #082e58; }
+.reveal-up { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; transition-delay: var(--delay,0ms); }
+.reveal-up.is-visible { opacity: 1; transform: none; }
+@media (max-width: 992px) { .subsidiary-showcase { padding: 14px 0 58px; } .subsidiary-title { font-size: 2.3rem; } .subsidiary-grid { max-width: 900px; } }
+@media (max-width: 768px) { .subsidiary-title { font-size: 2rem; } .subsidiary-card-image-wrap { aspect-ratio: 16 / 8; } .subsidiary-card-body { padding-inline: 20px; } }
+@media (max-width: 576px) { .subsidiary-showcase { padding: 10px 0 44px; } .subsidiary-header { margin-bottom: 24px; } .subsidiary-title { font-size: 1.9rem; } .subsidiary-subtitle { font-size: .95rem; } .subsidiary-card-body h2 { font-size: 1.4rem; } .subsidiary-description { font-size: .95rem; } }
+@media (prefers-reduced-motion: reduce) { .subsidiary-card,.subsidiary-card-image,.subsidiary-link,.reveal-up { transition: none !important; animation: none !important; } .reveal-up { opacity: 1; transform: none; } }
