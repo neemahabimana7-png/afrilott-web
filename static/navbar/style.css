@@ -774,3 +774,22 @@ position: relative;
     .footer-contact-item{ justify-content: center; text-align: left; }
     .footer-legal-links a{ display:inline-block; margin-right:12px; }
 }
+
+
+
+/* Space the homepage intro text below its image when columns stack. */
+@media (max-width: 991.98px) {
+    .centerpage > .container-lg {
+        padding-top: 32px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .centerpage > .container-lg > .row {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .centerpage .row > .col-lg-5 {
+        padding-top: 20px;
+    }
+}

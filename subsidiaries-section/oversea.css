@@ -63,6 +63,7 @@ body {
 }
 
 .oversea-about-copy p {
+    text-align: justify;
     margin: 0 0 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -224,4 +225,11 @@ body {
     .oversea-services-grid { grid-template-columns: 1fr; }
     .oversea-service { padding: 18px 0; border-top: 1px solid #ccd9d3; border-left: 0; }
     .oversea-service:first-child { border-top: 0; }
+}
+
+/* Match only the About Afrilott Overseas label to the About Us label. */
+.oversea-eyebrow {
+    font-family: var(--bs-body-font-family);
+    font-size: 1rem;
+    letter-spacing: 1px;
 }

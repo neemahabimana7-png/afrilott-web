@@ -26,7 +26,7 @@
 .why-choose-eyebrow span { width: 42px; height: 2px; background: #009970; }
 .why-choose-copy h1 { margin: 0 0 14px; color: #071734; font-size: 2.8rem; font-weight: 700; line-height: 1.12; }
 .why-choose-copy h1 strong { color: #009970; font-weight: 700; }
-.why-choose-copy > p { max-width: 680px; margin: 0; color: #555; font-size: 1rem; line-height: 1.8; }
+.why-choose-copy > p { text-align: justify; max-width: 680px; margin: 0; color: #555; font-size: 1rem; line-height: 1.8; }
 .why-choose-quote {
     display: flex;
     align-items: flex-start;
@@ -66,7 +66,7 @@
 .why-icon { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: #007f5d; }
 .why-icon svg { width: 22px; height: 22px; fill: #fff; }
 .why-card h2 { margin: 1px 0 9px; color: #071734; font-size: 1rem; font-weight: 700; line-height: 1.4; }
-.why-card p { margin: 0; color: #666; font-size: .88rem; line-height: 1.6; }
+.why-card p { text-align: justify; margin: 0; color: #666; font-size: .88rem; line-height: 1.6; }
 .why-card-wide { grid-column: 1 / -1; min-height: auto; }
 
 @media (max-width: 992px) {

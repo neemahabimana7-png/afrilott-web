@@ -634,6 +634,15 @@
 
 /* Keep the stacked image and journey section close on phones and tablets. */
 @media (max-width: 991.98px) {
+    .team-section .row {
+        row-gap: 24px;
+    }
+
+    .history-text,
+    .mission-text {
+        text-align: justify;
+    }
+
     .who-heading {
         margin-bottom: 24px;
         text-align: center;
