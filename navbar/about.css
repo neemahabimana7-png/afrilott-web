@@ -1,34 +1,41 @@
 /* Who We Are section */
-.who-we-are-section{
+.who-we-are-section {
     padding: 45px 0;
 }
-.who-tag{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    color:#009970;
-    font-weight:700;
-    letter-spacing:1px;
-    margin-bottom:12px;
+
+.who-tag {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #009970;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
 
-.who-line{ display:inline-block; width:60px; height:2px; background:#009970; }
-.who-heading{
+.who-line {
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background: #009970;
+}
+
+.who-heading {
     font-family: Tahoma, sans-serif;
     font-size: 5.5rem;
     line-height: 0.95;
-    font-weight:600;
-    color:#071734;
-    margin:0 0 10px 0;
+    font-weight: 600;
+    color: #071734;
+    margin: 0 0 10px 0;
 }
 
-.who-text{
-    color:#374151;
-    font-size:1.05rem;
-    line-height:1.8;
+.who-text {
+    color: #374151;
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
-.who-image{
+.who-image {
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -46,30 +53,43 @@
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
     .who-image {
         height: 450px;
     }
 }
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
     .who-image {
         height: 400px;
     }
 }
 
-@media (max-width: 768px){
-    .who-heading{ text-align:center; font-size: 2.4rem; }
-    .who-text{ text-align:left; }
-    .who-tag{ justify-content:center; }
+@media (max-width: 768px) {
+    .who-heading {
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .who-text {
+        text-align: left;
+    }
+
+    .who-tag {
+        justify-content: center;
+    }
+
     .who-image {
         height: 350px;
         margin-bottom: 30px;
     }
 }
 
-@media (max-width: 576px){
-    .who-heading { font-size: 1.9rem; }
+@media (max-width: 576px) {
+    .who-heading {
+        font-size: 1.9rem;
+    }
+
     .who-image {
         height: 280px;
         border-radius: 8px;
@@ -93,17 +113,19 @@
     border: 2px solid #c5e4f3;
     box-sizing: border-box;
 }
-.challenge-card:hover{
+
+.challenge-card:hover {
     border-color: #009970;
     box-shadow: 0 10px 28px rgba(0, 153, 112, 0.2);
     transform: translateY(-6px);
     background: #f9fffe;
 }
+
 .challenge-icon {
     display: flex;
     justify-content: center;
     margin-bottom: 16px;
-    color:#009970
+    color: #009970
 }
 
 .challenge-title {
@@ -112,7 +134,7 @@
     font-weight: 700;
     color: #071734;
     margin-bottom: 16px;
-  
+
 }
 
 .challenge-text {
@@ -138,7 +160,7 @@
         font-size: 1.5rem;
     }
 
-   
+
 }
 
 @media (max-width: 576px) {
@@ -177,7 +199,7 @@
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 15px;
-    
+
 }
 
 .history-btn {
@@ -195,7 +217,7 @@
 .history-btn:hover {
     background: #007a58;
     transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(0,153,112,.3);
+    box-shadow: 0 15px 30px rgba(0, 153, 112, .3);
 }
 
 /* CARD */
@@ -207,7 +229,7 @@
     overflow: hidden;
     max-width: 520px;
     min-height: 320px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: 0.3s ease;
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(45, 245, 108, 0.614);
@@ -338,7 +360,7 @@
 }
 
 .mission-card {
-     background: #009970;
+    background: #009970;
     padding: 35px 30px;
     border-radius: 12px;
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -353,12 +375,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
 }
 
 .mission-card:hover {
-   
-     background: #005a3a;
+
+    background: #005a3a;
     transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(0, 153, 112, 0.35);
 }
@@ -411,9 +433,11 @@
     .mission-vision-section {
         padding: 40px 0;
     }
+
     .section-title {
         font-size: 2.3rem;
     }
+
     .mission-card {
         padding: 35px 30px;
     }
@@ -423,12 +447,15 @@
     .section-title {
         font-size: 2rem;
     }
+
     .mission-card {
         padding: 30px 25px;
     }
+
     .mission-title {
         font-size: 1.35rem;
     }
+
     .mission-text {
         font-size: 0.98rem;
     }
@@ -438,16 +465,20 @@
     .mission-vision-section {
         padding: 24px 0 30px;
     }
+
     .section-title {
         font-size: 1.8rem;
     }
+
     .mission-card {
         padding: 25px 20px;
     }
+
     .mission-icon-wrapper {
         width: 50px;
         height: 50px;
     }
+
     .mission-icon {
         width: 25px;
         height: 25px;
@@ -583,9 +614,9 @@
 }
 
 .team-role {
-    font-family:   Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.95rem;
-     color: #071734;
+    color: #071734;
     font-weight: 400;
     margin: 0;
 }
@@ -594,9 +625,11 @@
     .team-section {
         padding: 40px 0;
     }
+
     .team-title {
         font-size: 2.3rem;
     }
+
     .team-image-wrapper {
         width: 240px;
         height: 240px;
@@ -607,9 +640,11 @@
     .team-title {
         font-size: 2rem;
     }
+
     .team-description {
         font-size: 1rem;
     }
+
     .team-image-wrapper {
         width: 220px;
         height: 220px;
@@ -620,14 +655,42 @@
     .team-section {
         padding: 30px 0;
     }
+
     .team-title {
         font-size: 1.8rem;
     }
+
     .team-image-wrapper {
         width: 200px;
         height: 200px;
     }
+
     .team-info {
         padding: 0;
+    }
+}
+
+/* Keep the stacked image and journey section close on phones and tablets. */
+@media (max-width: 991.98px) {
+    .who-heading {
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .who-tag {
+        justify-content: center;
+    }
+
+    .who-we-are-section {
+        padding-top: 16px;
+        padding-bottom: 0;
+    }
+
+    .who-image {
+        margin-bottom: 0;
+    }
+
+    .history-section {
+        padding-top: 24px;
     }
 }
