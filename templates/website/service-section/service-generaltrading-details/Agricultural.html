@@ -1,241 +1,286 @@
-{% load static %}<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petroleum Logistics - AFRILOTT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petroleum Logistics - AFRILOTT</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="{% static 'navbar/style.css' %}" rel="stylesheet">
-    <link href="{% static 'service-section/service-generaltrading-details/servicepl.css' %}" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="{% static 'navbar/style.css' %}" rel="stylesheet">
+  <link href="{% static 'service-section/service-generaltrading-details/servicepl.css' %}?v=services-title-spacing-v7"
+    rel="stylesheet">
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand me-auto" href="{% url 'website:home' %}"><img src="{% static 'images/Afrilott.png' %}" alt="AOS" height="100"></a>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-      <a class="navbar-brand me-auto" href="{% url 'website:home' %}"><img src="{% static 'images/Afrilott.png' %}" alt="AOS" height="80"></a>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="{% url 'website:home' %}"><img src="{% static 'images/Afrilott.png' %}"
+          alt="AOS" height="100"></a>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand me-auto" href="{% url 'website:home' %}"><img src="{% static 'images/Afrilott.png' %}"
+              alt="AOS" height="80"></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="{% url 'website:home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="{% url 'website:about' %}">About us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active mx-lg-2 dropdown-toggle" href="{% url 'website:services' %}" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'website:procurement_supply_chain' %}">Procurement &amp;
+                    Supply Chain Management</a></li>
+                <li><a class="dropdown-item" href="{% url 'website:general_trading_logistics' %}">General Trading &amp;
+                    Logistics</a></li>
+                <li><a class="dropdown-item" href="{% url 'website:digital_solutions' %}">Digital Solutions</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-lg-2 dropdown-toggle" href="{% url 'website:subsidiaries' %}" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Subsidiaries
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'website:afrilott_overseas' %}">Afrilott Overseas LLC</a></li>
+                <li><a class="dropdown-item" href="{% url 'website:transtrade_africa' %}">TransTrade Africa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link mx-lg-2" href="{% url 'website:why_choose_us' %}">Why Choose Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="{% url 'website:contact' %}">Contact us</a>
+            </li>
+
+          </ul>
+
+        </div>
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="{% url 'website:home' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="{% url 'website:about' %}">About us</a>
-          </li>
-           <li class="nav-item dropdown">
-                            <a class="nav-link active mx-lg-2 dropdown-toggle" href="{% url 'website:services' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'website:procurement_supply_chain' %}">Procurement &amp; Supply Chain Management</a></li>
-                                <li><a class="dropdown-item" href="{% url 'website:general_trading_logistics' %}">General Trading &amp; Logistics</a></li>
-                                <li><a class="dropdown-item" href="{% url 'website:digital_solutions' %}">Digital Solutions</a></li>
-                            </ul>
-                        </li>
-           <li class="nav-item dropdown">
-            <a class="nav-link mx-lg-2 dropdown-toggle" href="{% url 'website:subsidiaries' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Subsidiaries
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'website:afrilott_overseas' %}">Afrilott Overseas LLC</a></li>
-              <li><a class="dropdown-item" href="{% url 'website:transtrade_africa' %}">TransTrade Africa</a></li>
-            </ul>
-          </li>
-           <li class="nav-item"><a class="nav-link mx-lg-2" href="{% url 'website:why_choose_us' %}">Why Choose Us</a></li>
-<li class="nav-item">
-            <a class="nav-link mx-lg-2" href="{% url 'website:contact' %}">Contact us</a>
-          </li>
-         
-        </ul>
-        
-      </div>
+      <a href="{% url 'website:contact' %}" class="login-button"> Let's talk </a>
+      <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
-    <a href="{% url 'website:contact' %}" class="login-button"> Let's talk </a>
-    <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
-<div class="service-breadcrumb-bar" aria-label="Breadcrumb">
-  <div class="container">
-    <a href="{% url 'website:services' %}">All Services</a>
-    <span aria-hidden="true">/</span>
-    <a href="{% url 'website:general_trading_logistics' %}">General Trading &amp; Logistics</a>
-  </div>
-</div>
-
-
-<!-- Agricultural Commodities Section -->
-<section class="petroleum-section" data-aos="fade-up">
+  </nav>
+  <div class="service-breadcrumb-bar" aria-label="Breadcrumb">
     <div class="container">
-        <div class="petroleum-wrapper">
-
-            <!-- LEFT CONTENT -->
-            <div class="petroleum-content">
-
-              <h2 class="section-title" data-aos="fade-right" data-aos-delay="140">
-                    Agricultural Commodities
-                </h2>
-
-              <p data-aos="fade-right" data-aos-delay="200">
-                    AFRILOTT supports the trade and movement of agricultural commodities with reliable sourcing, efficient logistics, and strong market access across regional and international channels.
-                </p>
-
-              <p data-aos="fade-right" data-aos-delay="260">
-                    We connect producers, suppliers, and buyers through structured trade solutions that cover quality assurance, timely delivery, and end-to-end coordination from origin to destination.
-                </p>
-
-              <p data-aos="fade-right" data-aos-delay="320">
-                    Our expertise in agricultural commodities enables clients to benefit from dependable supply chains, competitive pricing, and seamless handling of bulk and value-added products.
-                </p>
-
-                <!-- STATS -->
-                <div class="stats-grid" data-aos="fade-up" data-aos-delay="360">
-                  <div class="stat-card" data-aos="zoom-in" data-aos-delay="430">
-                        <h3>30+</h3>
-                        <span>Commodity Partnerships</span>
-                    </div>
-
-                  <div class="stat-card" data-aos="zoom-in" data-aos-delay="500">
-                        <h3>24/7</h3>
-                        <span>Supply Coordination</span>
-                    </div>
-
-                  <div class="stat-card" data-aos="zoom-in" data-aos-delay="570">
-                        <h3>100%</h3>
-                        <span>Quality Focus</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- RIGHT SIDE -->
-            <div class="petroleum-images" data-aos="fade-left" data-aos-delay="180">
-
-                <div class="green-shape"></div>
-
-                <img
-                    src="https://media.istockphoto.com/id/990083620/fr/photo/chariots-de-manutention-des-sacs-de-sucre-pour-le-rembourrage-dans-le-r%C3%A9cipient-pour.jpg?b=1&s=612x612&w=0&k=20&c=D3GN1206xyeCyDrt_nyaI-0Hsmo_zc8A9GFm0K7ssyg="
-                    class="main-image"
-                  data-aos="zoom-in-left"
-                  data-aos-delay="260"
-                    alt="Agricultural Commodities">
-
-                <img
-                    src="https://images.pexels.com/photos/7420980/pexels-photo-7420980.jpeg"
-                    class="small-image"
-                  data-aos="zoom-in-left"
-                  data-aos-delay="340"
-                    alt="Agricultural Trade Team">
-
-            </div>
-
-        </div>
-    </div>
-</section>
-<footer class="site-footer">
-  <div class="footer-inner container">
-    <div class="row gy-4 align-items-start">
-      <div class="col-lg-3 text-center text-lg-start">
-        <div class="footer-logo-wrap mb-3"><img src="{% static 'images/Afrilott.png' %}" alt="Afrilott logo" class="footer-logo-img"></div>
-        <h5 class="footer-company-name">AFRILOTT HOLDING LTD</h5>
-        <p class="footer-company-tagline">Logistics, Trades &amp; Technologies</p>
-        <div class="footer-social-links" aria-label="Afrilott social media">
-          <a class="footer-social-link" href="https://www.facebook.com/EpcaGroup" target="_blank" rel="noopener noreferrer" aria-label="Afrilott on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.8 1.8-1.8H17V2.1c-.8-.1-1.7-.1-2.5-.1-2.6 0-4.5 1.6-4.5 4.7v2.8H7V13h3v9h3.5Z"/></svg></a>
-          <a class="footer-social-link" href="https://www.linkedin.com/company/epc-africa-group/" target="_blank" rel="noopener noreferrer" aria-label="Afrilott on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 7.8H1.7V22h3.5V7.8ZM3.5 2A2.1 2.1 0 1 0 3.5 6.2 2.1 2.1 0 0 0 3.5 2Zm18.8 11.8c0-4.3-2.3-6.3-5.4-6.3a4.7 4.7 0 0 0-4.2 2.3v-2h-3.5V22h3.5v-7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22h3.5l1.2-8.2Z"/></svg></a>
-          <a class="footer-social-link" href="https://www.instagram.com/epc_africa_group?igsi=NjhmYXlqdnU0Z3Z4" target="_blank" rel="noopener noreferrer" aria-label="Afrilott on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
-          <a class="footer-social-link" href="https://x.com/epcafrica" target="_blank" rel="noopener noreferrer" aria-label="Afrilott on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22H17l-4.8-6.4L6.6 22H3.5l7.2-8.3L3 2h6.3l4.4 5.8L18.9 2Zm-1.1 17.9h1.7L8.4 4H6.6l11.2 15.9Z"/></svg></a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <h6 class="footer-title">Quick Links</h6>
-        <ul class="footer-links">
-          <li><a href="{% url 'website:home' %}">Home</a></li><li><a href="{% url 'website:about' %}">About Us</a></li>
-          <li><a href="{% url 'website:services' %}">Services</a></li><li><a href="{% url 'website:subsidiaries' %}">Subsidiaries</a></li>
-          <li><a href="{% url 'website:why_choose_us' %}">Why Choose Us</a></li>
-          <li><a href="{% url 'website:contact' %}">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3">
-        <h6 class="footer-title">Services</h6>
-        <ul class="footer-links">
-          <li><a href="{% url 'website:procurement_supply_chain' %}">Procurement &amp; Supply Chain</a></li>
-          <li><a href="{% url 'website:general_trading_logistics' %}">General Trading &amp; Logistics</a></li>
-          <li><a href="{% url 'website:digital_solutions' %}">Digital Solutions</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3">
-        <h6 class="footer-title">Contact</h6>
-        <div class="footer-contact">
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg><span>Gasabo &ndash; Gacuriro<br>KG 436 St, Plot No 6A<br>Kigali, Rwanda</span></div>
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.62 10.79 2.2-2.2a1 1 0 0 0 .23-1.05L7.8 3.8A1 1 0 0 0 6.85 3H3.5a1 1 0 0 0-1 1A17.5 17.5 0 0 0 20 21.5a1 1 0 0 0 1-1v-3.35a1 1 0 0 0-.8-.98l-3.74-1.25a1 1 0 0 0-1.05.23l-2.2 2.2a15.1 15.1 0 0 1-6.59-6.56Z"/></svg><a href="tel:+250788358601">+250 788 358 601</a></div>
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm9 7 8.5-5H3.5L12 12Zm0 2.3L3 9v8h18V9l-9 5.3Z"/></svg><a href="mailto:afrilott@epcafrica.com">afrilott@epcafrica.com</a></div>
-        </div>
-      </div>
+      <a href="{% url 'website:services' %}">All Services</a>
+      <span aria-hidden="true">/</span>
+      <a href="{% url 'website:general_trading_logistics' %}">General Trading &amp; Logistics</a>
     </div>
   </div>
-  <div class="footer-bottom text-center mt-4"><p>&copy; 2026 AFRILOTT Holding Ltd. All Rights Reserved.</p></div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    easing: 'ease-out-cubic',
-    once: true,
-    offset: 90,
-    delay: 60,
-  });
 
-  function syncServicePanelHeight() {
-    var left = document.querySelector('.petroleum-content');
-    var panel = document.querySelector('.petroleum-images');
 
-    if (!left || !panel) {
-      return;
-    }
+  <!-- Agricultural Commodities Section -->
+  <section class="petroleum-section" data-aos="fade-up">
+    <div class="container">
+      <div class="petroleum-wrapper">
 
-    if (window.innerWidth > 991) {
-      panel.style.minHeight = left.offsetHeight + 'px';
-    } else {
-      panel.style.minHeight = '';
-    }
-  }
+        <!-- LEFT CONTENT -->
+        <div class="petroleum-content">
 
-  function setupImageParallax() {
-    var wrap = document.querySelector('.petroleum-images');
-    var main = document.querySelector('.main-image');
-    var small = document.querySelector('.small-image');
+          <h2 class="section-title" data-aos="fade-right" data-aos-delay="140">
+            Agricultural Commodities
+          </h2>
 
-    if (!wrap || !main || !small || window.innerWidth <= 991) {
-      return;
-    }
+          <p data-aos="fade-right" data-aos-delay="200">
+            AFRILOTT supports the trade and movement of agricultural commodities with reliable sourcing, efficient
+            logistics, and strong market access across regional and international channels.
+          </p>
 
-    wrap.addEventListener('mousemove', function (event) {
-      var rect = wrap.getBoundingClientRect();
-      var x = (event.clientX - rect.left) / rect.width - 0.5;
-      var y = (event.clientY - rect.top) / rect.height - 0.5;
+          <p data-aos="fade-right" data-aos-delay="260">
+            We connect producers, suppliers, and buyers through structured trade solutions that cover quality assurance,
+            timely delivery, and end-to-end coordination from origin to destination.
+          </p>
 
-      main.style.transform = 'translate3d(' + (x * 8) + 'px,' + (y * 10) + 'px,0)';
-      small.style.transform = 'translate3d(' + (x * -10) + 'px,' + (y * -8) + 'px,0)';
+          <p data-aos="fade-right" data-aos-delay="320">
+            Our expertise in agricultural commodities enables clients to benefit from dependable supply chains,
+            competitive pricing, and seamless handling of bulk and value-added products.
+          </p>
+
+          <!-- STATS -->
+          <div class="stats-grid" data-aos="fade-up" data-aos-delay="360">
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="430">
+              <h3>10+</h3>
+              <span>Commodity Partnerships</span>
+            </div>
+
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="500">
+              <h3>24/7</h3>
+              <span>Supply Coordination</span>
+            </div>
+
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="570">
+              <h3>100%</h3>
+              <span>Quality Focus</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="petroleum-images" data-aos="fade-left" data-aos-delay="180">
+
+          <div class="green-shape"></div>
+
+          <img
+            src="https://media.istockphoto.com/id/990083620/fr/photo/chariots-de-manutention-des-sacs-de-sucre-pour-le-rembourrage-dans-le-r%C3%A9cipient-pour.jpg?b=1&s=612x612&w=0&k=20&c=D3GN1206xyeCyDrt_nyaI-0Hsmo_zc8A9GFm0K7ssyg="
+            class="main-image" data-aos="zoom-in-left" data-aos-delay="260" alt="Agricultural Commodities">
+
+          <img src="https://images.pexels.com/photos/7420980/pexels-photo-7420980.jpeg" class="small-image"
+            data-aos="zoom-in-left" data-aos-delay="340" alt="Agricultural Trade Team">
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="row gy-4 align-items-start">
+        <div class="col-lg-3 text-center text-lg-start">
+          <div class="footer-logo-wrap mb-3"><img src="{% static 'images/Afrilott.png' %}" alt="Afrilott logo"
+              class="footer-logo-img"></div>
+          <h5 class="footer-company-name">AFRILOTT HOLDING LTD</h5>
+          <p class="footer-company-tagline">Logistics, Trades &amp; Technologies</p>
+          <div class="footer-social-links" aria-label="Afrilott social media">
+            <a class="footer-social-link" href="https://www.facebook.com/EpcaGroup" target="_blank"
+              rel="noopener noreferrer" aria-label="Afrilott on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.8 1.8-1.8H17V2.1c-.8-.1-1.7-.1-2.5-.1-2.6 0-4.5 1.6-4.5 4.7v2.8H7V13h3v9h3.5Z" />
+              </svg></a>
+            <a class="footer-social-link" href="https://www.linkedin.com/company/epc-africa-group/" target="_blank"
+              rel="noopener noreferrer" aria-label="Afrilott on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M5.2 7.8H1.7V22h3.5V7.8ZM3.5 2A2.1 2.1 0 1 0 3.5 6.2 2.1 2.1 0 0 0 3.5 2Zm18.8 11.8c0-4.3-2.3-6.3-5.4-6.3a4.7 4.7 0 0 0-4.2 2.3v-2h-3.5V22h3.5v-7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22h3.5l1.2-8.2Z" />
+              </svg></a>
+            <a class="footer-social-link" href="https://www.instagram.com/epc_africa_group?igsi=NjhmYXlqdnU0Z3Z4"
+              target="_blank" rel="noopener noreferrer" aria-label="Afrilott on Instagram"><svg viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
+              </svg></a>
+            <a class="footer-social-link" href="https://x.com/epcafrica" target="_blank" rel="noopener noreferrer"
+              aria-label="Afrilott on X"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.9 2H22l-6.8 7.8L23.2 22H17l-4.8-6.4L6.6 22H3.5l7.2-8.3L3 2h6.3l4.4 5.8L18.9 2Zm-1.1 17.9h1.7L8.4 4H6.6l11.2 15.9Z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="footer-title">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="{% url 'website:home' %}">Home</a></li>
+            <li><a href="{% url 'website:about' %}">About Us</a></li>
+            <li><a href="{% url 'website:services' %}">Services</a></li>
+            <li><a href="{% url 'website:subsidiaries' %}">Subsidiaries</a></li>
+            <li><a href="{% url 'website:why_choose_us' %}">Why Choose Us</a></li>
+            <li><a href="{% url 'website:contact' %}">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="footer-title">Services</h6>
+          <ul class="footer-links">
+            <li><a href="{% url 'website:procurement_supply_chain' %}">Procurement &amp; Supply Chain</a></li>
+            <li><a href="{% url 'website:general_trading_logistics' %}">General Trading &amp; Logistics</a></li>
+            <li><a href="{% url 'website:digital_solutions' %}">Digital Solutions</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="footer-title">Contact</h6>
+          <div class="footer-contact">
+            <div class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
+              </svg><span>Gasabo &ndash; Gacuriro<br>KG 436 St, Plot No 6A<br>Kigali, Rwanda</span></div>
+            <div class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m6.62 10.79 2.2-2.2a1 1 0 0 0 .23-1.05L7.8 3.8A1 1 0 0 0 6.85 3H3.5a1 1 0 0 0-1 1A17.5 17.5 0 0 0 20 21.5a1 1 0 0 0 1-1v-3.35a1 1 0 0 0-.8-.98l-3.74-1.25a1 1 0 0 0-1.05.23l-2.2 2.2a15.1 15.1 0 0 1-6.59-6.56Z" />
+              </svg><a href="tel:+250788358601">+250 788 358 601</a></div>
+            <div class="footer-contact-item"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm9 7 8.5-5H3.5L12 12Zm0 2.3L3 9v8h18V9l-9 5.3Z" />
+              </svg><a href="mailto:afrilott@epcafrica.com">afrilott@epcafrica.com</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center mt-4">
+      <p>&copy; 2026 AFRILOTT Holding Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 90,
+      delay: 60,
     });
 
-    wrap.addEventListener('mouseleave', function () {
-      main.style.transform = '';
-      small.style.transform = '';
-    });
-  }
+    function syncServicePanelHeight() {
+      var left = document.querySelector('.petroleum-content');
+      var panel = document.querySelector('.petroleum-images');
 
-  window.addEventListener('load', syncServicePanelHeight);
-  window.addEventListener('load', setupImageParallax);
-  window.addEventListener('resize', syncServicePanelHeight);
-  window.addEventListener('resize', setupImageParallax);
-</script>
+      if (!left || !panel) {
+        return;
+      }
+
+      if (window.innerWidth > 991) {
+        panel.style.minHeight = left.offsetHeight + 'px';
+      } else {
+        panel.style.minHeight = '';
+      }
+    }
+
+    function setupImageParallax() {
+      var wrap = document.querySelector('.petroleum-images');
+      var main = document.querySelector('.main-image');
+      var small = document.querySelector('.small-image');
+
+      if (!wrap || !main || !small || window.innerWidth <= 991) {
+        return;
+      }
+
+      wrap.addEventListener('mousemove', function (event) {
+        var rect = wrap.getBoundingClientRect();
+        var x = (event.clientX - rect.left) / rect.width - 0.5;
+        var y = (event.clientY - rect.top) / rect.height - 0.5;
+
+        main.style.transform = 'translate3d(' + (x * 8) + 'px,' + (y * 10) + 'px,0)';
+        small.style.transform = 'translate3d(' + (x * -10) + 'px,' + (y * -8) + 'px,0)';
+      });
+
+      wrap.addEventListener('mouseleave', function () {
+        main.style.transform = '';
+        small.style.transform = '';
+      });
+    }
+
+    window.addEventListener('load', syncServicePanelHeight);
+    window.addEventListener('load', setupImageParallax);
+    window.addEventListener('resize', syncServicePanelHeight);
+    window.addEventListener('resize', setupImageParallax);
+  </script>
 </body>
+
 </html>

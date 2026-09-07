@@ -1,4 +1,5 @@
-{% load static %}<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,13 +16,13 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand me-auto" href="{% url 'website:home' %}"><img src="{% static 'images/Afrilott.png' %}" alt="AOS"
-                    height="100"></a>
+            <a class="navbar-brand me-auto" href="{% url 'website:home' %}"><img
+                    src="{% static 'images/Afrilott.png' %}" alt="AOS" height="100"></a>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <a class="navbar-brand me-auto" href="{% url 'website:home' %}"><img src="{% static 'images/Afrilott.png' %}" alt="AOS"
-                            height="80"></a>
+                    <a class="navbar-brand me-auto" href="{% url 'website:home' %}"><img
+                            src="{% static 'images/Afrilott.png' %}" alt="AOS" height="80"></a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -33,35 +34,40 @@
                             <a class="nav-link mx-lg-2" href="{% url 'website:about' %}">About us</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link mx-lg-2 dropdown-toggle" href="{% url 'website:services' %}" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link mx-lg-2 dropdown-toggle" href="{% url 'website:services' %}"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'website:procurement_supply_chain' %}">Procurement &amp; Supply
+                                <li><a class="dropdown-item"
+                                        href="{% url 'website:procurement_supply_chain' %}">Procurement &amp; Supply
                                         Chain
                                         Management</a></li>
-                                <li><a class="dropdown-item" href="{% url 'website:general_trading_logistics' %}">General Trading &amp;
+                                <li><a class="dropdown-item"
+                                        href="{% url 'website:general_trading_logistics' %}">General Trading &amp;
                                         Logistics</a></li>
                                 <li><a class="dropdown-item" href="{% url 'website:digital_solutions' %}">Digital
                                         Solutions</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link active mx-lg-2 dropdown-toggle"
-                                href="{% url 'website:subsidiaries' %}" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link active mx-lg-2 dropdown-toggle" href="{% url 'website:subsidiaries' %}"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Subsidiaries
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'website:afrilott_overseas' %}">Afrilott Overseas
+                                <li><a class="dropdown-item" href="{% url 'website:afrilott_overseas' %}">Afrilott
+                                        Overseas
                                         LLC</a></li>
-                                <li><a class="dropdown-item" href="{% url 'website:transtrade_africa' %}">TransTrade Africa</a>
+                                <li><a class="dropdown-item" href="{% url 'website:transtrade_africa' %}">TransTrade
+                                        Africa</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link mx-lg-2" href="{% url 'website:why_choose_us' %}">Why Choose Us</a></li>
-                        <li class="nav-item"><a class="nav-link mx-lg-2" href="{% url 'website:contact' %}">Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link mx-lg-2" href="{% url 'website:why_choose_us' %}">Why
+                                Choose Us</a></li>
+                        <li class="nav-item"><a class="nav-link mx-lg-2" href="{% url 'website:contact' %}">Contact
+                                us</a></li>
                     </ul>
                 </div>
             </div>
@@ -106,8 +112,8 @@
                                     <li>Procurement &amp; supply management</li>
                                     <li>Regional distribution support</li>
                                 </ul>
-                                <a href="{% url 'website:afrilott_overseas' %}" class="subsidiary-link">Visit Website <span
-                                        aria-hidden="true">→</span></a>
+                                <a href="{% url 'website:afrilott_overseas' %}" class="subsidiary-link">Visit Website
+                                    <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                     </div>
@@ -134,8 +140,8 @@
                                     <li>Warehousing &amp; storage solutions</li>
                                     <li>Freight coordination (air, sea &amp; land)</li>
                                 </ul>
-                                <a href="{% url 'website:transtrade_africa' %}" class="subsidiary-link">Visit Website <span
-                                        aria-hidden="true">→</span></a>
+                                <a href="{% url 'website:transtrade_africa' %}" class="subsidiary-link">Visit Website
+                                    <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                     </div>

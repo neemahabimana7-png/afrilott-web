@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="{% static 'navbar/style.css' %}" rel="stylesheet">
-    <link href="{% static 'service-section/service-generaltrading-details/servicepl.css' %}" rel="stylesheet">
+    <link href="{% static 'service-section/service-generaltrading-details/servicepl.css' %}?v=services-title-spacing-v7" rel="stylesheet">
 </head>
 <body>
 
@@ -110,11 +110,11 @@
                 <!-- STATS -->
                 <div class="stats-grid" data-aos="fade-up" data-aos-delay="360">
                     <div class="stat-card" data-aos="zoom-in" data-aos-delay="430">
-                        <h3>1,000+</h3>
+                        <h3>15+</h3>
                         <span>Products Supplied</span>
                     </div>
                     <div class="stat-card" data-aos="zoom-in" data-aos-delay="500">
-                        <h3>50+</h3>
+                        <h3>8+</h3>
                         <span>Lab Partners</span>
                     </div>
                     <div class="stat-card" data-aos="zoom-in" data-aos-delay="570">
@@ -136,7 +136,8 @@
                     data-aos="zoom-in-left"
                     data-aos-delay="260"
                     alt="Laboratory Equipment"
-                    onerror="this.src="{% static 'images/AFLT 1.jpg.jpeg' %}"">
+                    data-fallback-src="{% static 'images/AFLT 1.jpg.jpeg' %}"
+                    onerror="this.onerror=null; this.src=this.dataset.fallbackSrc;">
 
                 <img
                     src="https://images.unsplash.com/photo-1738778151587-032287ae9f90?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -144,7 +145,8 @@
                     data-aos="zoom-in-left"
                     data-aos-delay="340"
                     alt="Laboratory Consumables"
-                    onerror="this.src="{% static 'images/laptop.jpg' %}"">
+                    data-fallback-src="{% static 'images/laptop.jpg' %}"
+                    onerror="this.onerror=null; this.src=this.dataset.fallbackSrc;">
 
             </div>
 
